@@ -9,7 +9,7 @@ cards:
                 מעט מאוד עסקים משתתפים בהתקשרויות עם הממשלה. "רכש פתוח" יקל עליכם את תהליך ההיכרות, המעקב אחר פעילות הרכש הממשלתית ושיתוף עם אחרים.
           action:
             text: עוד על תהליכי הרכש
-            target: modal:porcure_processes
+            target: modal:procure_processes
         -
           title: איך זה עובד בדיוק?
           icon: supp-a2
@@ -108,7 +108,7 @@ cards:
             text: לחיפוש
             target: search
 modals:
-  porcure_processes:
+  procure_processes:
     title: קצת על תהליכי הרכש הממשלתיים
     text: |
           1. מי הם הגופים שרוכשים בשם הממשלה?
