@@ -11,7 +11,7 @@ import {Component, ViewChild, ElementRef} from '@angular/core';
           <div class='layer'></div>
           <div class="main-text layer">
             <h1>
-            ב-{{data.year}} רכשה המדינה סחורות ושירותים בכ-{{(data.total_amount/1000000000) | number:'1.0-2' }} מיליארד ₪. <br/>
+            ב-{{data.year}} רכשה המדינה סחורות ושירותים ביותר מ-{{(data.total_amount/1000000000) | number:'1.0-0' }} מיליארד ₪. <br/>
             פעולות הרכש כללו {{data.num_central | number}}
             <span [bkTooltip]='tooltips.central'>מכרזים מרכזיים</span>            
             של מנהל הרכש
