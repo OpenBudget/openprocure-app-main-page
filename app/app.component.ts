@@ -23,7 +23,6 @@ import {Component, ViewChild, ElementRef} from '@angular/core';
              בשנה זו.
             </h1>
             <budgetkey-search-bar [searchTerm]="''"
-                                  [instantSearch]="false"
                                   (navigate)="onNavigate($event)"
             ></budgetkey-search-bar>
             <div class="search-guide" #searchGuide>
