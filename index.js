@@ -8,7 +8,7 @@ const request = require("request");
 const urlencode = require('urlencode');
 
 const basePath = process.env.BASE_PATH || '/';
-const rootPath = path.resolve(__dirname, './dist');
+const rootPath = path.resolve(__dirname, './dist/openprocure-app-main-page');
 const disableCache = process.env.DISABLE_CACHE || false;
 
 const app = express();
@@ -23,7 +23,7 @@ nunjucks.configure(rootPath, {
 });
 
 var theme = 'govbuy';
-var themeFileName = 'theme.'+theme+'.json';
+var themeFileName = 'theme.'+theme+'.he.json';
 var themeScript = '';
 var themeJson = null;
 // try the themes root directory first - this allows mount multiple themes in a single shared docker volume
@@ -40,6 +40,7 @@ if (themeJson) {
   }
   themeScript += "BUDGETKEY_THEME_ID=" + JSON.stringify(theme) + ";";
 }
+themeScript += "GOVBUY_GONFIG=" + fs.readFileSync(path.resolve(rootPath, 'assets', 'configuration.json'))
 
 
 app.set('port', process.env.PORT || 8000);

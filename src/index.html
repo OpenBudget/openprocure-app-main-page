@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <base href="/">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>רכש פתוח</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="//next.obudget.org/_fonts/stylesheet.css"></link>
+  <link rel="preload" href="assets/img/bg1.jpg" as="image">
+  <link rel="preload" href="assets/img/bg2.jpg" as="image">
+  <link rel="preload" href="assets/img/bg3.jpg" as="image">
+  <script>
+    window.prefetchedData = {{ prefetchedData | safe }};
+    {{ themeScript | safe }}
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-10203855-10"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-10203855-10');
+</script>
+</html>
