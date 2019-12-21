@@ -9,16 +9,15 @@ const urlencode = require('urlencode');
 
 const basePath = process.env.BASE_PATH || '/';
 const rootPath = path.resolve(__dirname, './dist/openprocure-app-main-page');
-const disableCache = process.env.DISABLE_CACHE || false;
 
 const app = express();
-if (disableCache) {
-  app.disable('view cache');
-}
+app.use(basePath, express.static(rootPath, {
+  index: false,
+  maxAge: '1d',
+}));
 
 nunjucks.configure(rootPath, {
   autoescape: true,
-  noCache: disableCache,
   express: app
 });
 
