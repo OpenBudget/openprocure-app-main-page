@@ -78,7 +78,7 @@ body {
       }
   
       budgetkey-search-bar {
-        width: 80%;
+        width: 90%;
       }
   
       input {
@@ -138,8 +138,8 @@ body {
 
       .tab-button {
 
-        height: 120px;
-        width: 495px;
+        min-height: 120px;
+        max-width: 495px;
         margin: 0px 15px 0px 15px;
         
         &.active {
@@ -193,11 +193,12 @@ body {
         font-family: "Miriam Libre";	
         font-size: 28px;	
         font-weight: bold;
+        max-width: 90%;
       }
 
       .card-row-cards {
         display: flex;
-        flex-flow: row;
+        flex-flow: row wrap;
         align-items: stretch;  
         justify-content: center;
 
@@ -285,4 +286,8 @@ body {
     width: 100%;
     text-align: left;
   }
+}
+
+.bkmodal-content {
+    padding: 60px 20px !important;
 }
