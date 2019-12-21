@@ -2,6 +2,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 declare const GOVBUY_GONFIG: any;
+declare const prefetchedData: any;
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,7 @@ export class AppComponent {
   @ViewChild('searchGuide') searchGuide: ElementRef;
 
   active = 'supplier';
-  data: any = window['prefetchedData'].details;
+  data: any = prefetchedData.details;
   modal: any = {title: 'Hi', message: 'Yo'};
   sections = GOVBUY_GONFIG.cards;
   modals = GOVBUY_GONFIG.modals;
