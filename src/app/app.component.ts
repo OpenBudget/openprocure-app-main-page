@@ -30,8 +30,8 @@ export class AppComponent {
     } else if (todo.indexOf('search') === 0) {
       window.scrollTo({top: 0, behavior: 'smooth'});
     } else {
-      let modal_id = todo.slice(6);
-      let modal: any = this.modals[modal_id];
+      const modal_id = todo.slice(6);
+      const modal: any = this.modals[modal_id];
       if (modal) {
         this.modal.visible = true;
         this.modal.title = modal.title;
